@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(156, 175, 136, 0.2), #f5f3f0);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero__headline {
+  font-family: var(--font-family);
+  font-size: 60px;
+  font-weight: var(--font-weight-bold);
+  color: var(--secondary);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.hero__headline--frescos {
+  color: #6b7a56;
+}
+
+.hero__headline--naturales {
+  color: #9caf88;
+}
+
+.hero__subtitle {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: var(--font-weight-regular);
+  color: #4b5563;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero__cta-group {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.hero__btn-primary {
+  height: 60px;
+  padding: 0 32px;
+  background-color: #6b7a56;
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hero__btn-primary:hover {
+  background-color: #5a6847;
+}
+
+.hero__btn-secondary {
+  height: 60px;
+  padding: 0 32px;
+  background-color: transparent;
+  color: #6b7a56;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  border: 2px solid #6b7a56;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hero__btn-secondary:hover {
+  background-color: rgba(107, 122, 86, 0.08);
+}
+
+@media (max-width: 768px) {
+  .hero__content {
+    padding: 60px 24px;
+  }
+
+  .hero__headline {
+    font-size: 36px;
+  }
+
+  .hero__cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__btn-primary,
+  .hero__btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

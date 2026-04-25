@@ -1,0 +1,208 @@
+/* Overlay */
+.login-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modal-fade-in 0.2s ease;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Panel */
+.login-modal {
+  background-color: var(--white);
+  border-radius: var(--round-corner-l);
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 36px;
+  position: relative;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modal-slide-up 0.25s ease;
+}
+
+@keyframes modal-slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.login-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--tertiary);
+  font-size: 20px;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: var(--round-corner-m);
+  transition: background-color 0.15s;
+}
+
+.login-modal__close:hover {
+  background-color: #f3f4f6;
+}
+
+.login-modal__logo {
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+  font-family: var(--font-family);
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.login-modal__title {
+  font-size: 20px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--secondary);
+  font-family: var(--font-family);
+  text-align: center;
+  margin: 0 0 4px;
+}
+
+.login-modal__subtitle {
+  font-size: 14px;
+  color: var(--gray-medium);
+  font-family: var(--font-family);
+  text-align: center;
+  margin: 0 0 28px;
+}
+
+.login-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-modal__label {
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--secondary);
+  font-family: var(--font-family);
+}
+
+.login-modal__input {
+  height: 44px;
+  border: 1.5px solid #d1d5db;
+  border-radius: var(--round-corner-m);
+  padding: 0 14px;
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--secondary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-modal__input:focus {
+  border-color: var(--primary);
+}
+
+.login-modal__input--error {
+  border-color: #ef4444;
+}
+
+.login-modal__error {
+  font-size: 12px;
+  color: #ef4444;
+  font-family: var(--font-family);
+  margin: -8px 0 0;
+}
+
+.login-modal__forgot {
+  font-size: 13px;
+  color: var(--primary);
+  font-family: var(--font-family);
+  text-align: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  margin-top: -8px;
+}
+
+.login-modal__submit {
+  height: 48px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--round-corner-m);
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 4px;
+}
+
+.login-modal__submit:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.login-modal__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-modal__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0;
+}
+
+.login-modal__divider::before,
+.login-modal__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+.login-modal__divider-text {
+  font-size: 12px;
+  color: var(--gray-medium);
+  font-family: var(--font-family);
+  white-space: nowrap;
+}
+
+.login-modal__register {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-medium);
+  font-family: var(--font-family);
+}
+
+.login-modal__register-link {
+  color: var(--primary);
+  font-weight: var(--font-weight-semibold);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-family);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-modal {
+    padding: 32px 24px;
+  }
+}

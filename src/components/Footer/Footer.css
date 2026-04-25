@@ -1,0 +1,118 @@
+.footer {
+  background-color: var(--secondary);
+  padding: 48px 24px;
+  font-family: var(--font-family);
+  color: var(--white);
+}
+
+.footer__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Column 1 — Brand */
+.footer__brand-name {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--white);
+  margin: 0 0 16px;
+}
+
+.footer__brand-desc {
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  color: var(--white);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Column 2 — Contact */
+.footer__heading {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--white);
+  margin: 0 0 12px;
+}
+
+.footer__contact-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.footer__contact-btn {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--round-corner-m);
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.footer__contact-btn:hover {
+  opacity: 0.85;
+}
+
+/* Column 3 — Social & contact */
+.footer__social-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.footer__social-btn {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--round-corner-m);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.footer__social-btn:hover {
+  opacity: 0.85;
+}
+
+.footer__contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--white);
+}
+
+.footer__contact-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* Responsive — stack columns below 768px */
+@media (max-width: 767px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
