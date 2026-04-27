@@ -38,8 +38,9 @@
 
 .lp-products__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 310px));
   gap: 24px;
+  justify-content: center;
 }
 
 .lp-values__grid {
@@ -50,17 +51,22 @@
 
 .lp-blog__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 397px));
   gap: 24px;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
   .lp-products__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 310px));
   }
 
   .lp-values__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lp-blog__grid {
+    grid-template-columns: repeat(2, minmax(0, 397px));
   }
 }
 
@@ -74,7 +80,7 @@
   }
 
   .lp-products__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .lp-values__grid {
@@ -82,6 +88,6 @@
   }
 
   .lp-blog__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 397px);
   }
 }

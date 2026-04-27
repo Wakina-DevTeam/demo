@@ -24,6 +24,12 @@ export default function LandingPage({ onLoginClick, onContactClick }: LandingPag
   const navigate = useNavigate();
   const featuredProducts = products.slice(0, 4);
 
+  // Only show categories that have at least one product
+  const categoryIds = new Set(products.map((p) => p.category));
+  const activeCategories = categories.filter((c) =>
+    categoryIds.has(c.id as 'frutas' | 'verduras' | 'combos')
+  );
+
   return (
     <>
       <Navbar onLoginClick={onLoginClick} onContactClick={onContactClick} />
@@ -41,7 +47,7 @@ export default function LandingPage({ onLoginClick, onContactClick }: LandingPag
               Explora nuestra variedad de productos frescos y orgánicos
             </p>
             <div className="lp-categories__grid">
-              {categories.map((category) => (
+              {activeCategories.map((category) => (
                 <CategoryCard key={category.id} category={category} />
               ))}
             </div>
